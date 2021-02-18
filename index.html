@@ -7,14 +7,21 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <button type="button" name="Upload" id="b1">Upload</button>
+  <div class="toptab">
+  <img src="logo.png" style="width: 350px; margin-left: 10px;">
   <button type="button" name="Summary" id="b2">Summary</button>
   <button type="button" name="Download" id="b3">Download</button>
-
+  <div class="dropdown">
+  <button class="dropbtn">Dropdown</button>
+  <div class="dropdown-content">
+  <a href="#">XML</a>
+  <a href="#">PDF</a>
+  <a href="#">DOC</a>
+  </div>
+</div>
+  </div>
 <ul>
-  <li><a href="#" style="background-color: skyblue">CDR Analyzer </a></li>
-  <br>
+  
   <li><a  class="tablinks" onclick="myfunction(event, 'Home')" href="#home"><img src="https://img.icons8.com/material/24/000000/home--v5.png"/> Home</a></li>
   <li><a href="#" class="tablinks" onclick="myfunction(event, 'MaxCaller')"><img src="https://img.icons8.com/android/24/000000/end-call.png"/> Max Caller</a></li>
   <li><a href="#" class="tablinks" onclick="myfunction(event, 'MaxDuration')"><img src="https://img.icons8.com/metro/26/000000/time.png"/> Max Duration</a></li>
