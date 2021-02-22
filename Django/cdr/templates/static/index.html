@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CDR Analyzer</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="toptab">
+  <img src="logo1.png" style="width: 350px; margin-left: 10px;">
+  <button type="button" name="Summary" id="b1">Upload</button>
+  <button type="button" name="Summary" id="b2">Summary</button>
+  <button type="button" name="Download" id="b3">About</button>
+  <div class="dropdown">
+  <button class="dropbtn">Download</button>
+  <div class="dropdown-content">
+  <a href="#">XML</a>
+  <a href="#">PDF</a>
+  <a href="#">DOC</a>
+  </div>
+</div>
+  </div>
+<ul>
+
+  <li><a  class="tablinks" onclick="myfunction(event, 'Home')" href="#home"><img src="https://img.icons8.com/material-sharp/30/ffffff/home.png"/> Home</a></li>
+  <li><a href="#" class="tablinks" onclick="myfunction(event, 'MaxCaller')"><img src="https://img.icons8.com/metro/26/ffffff/phone-disconnected.png"/> Max Caller</a></li>
+  <li><a href="#" class="tablinks" onclick="myfunction(event, 'MaxDuration')"><img src="https://img.icons8.com/metro/26/ffffff/time-machine.png"/> Max Duration</a></li>
+  <li><a href="#" class="tablinks" onclick="myfunction(event, 'MaxIMEI')"><img src="https://img.icons8.com/material/24/ffffff/iphone--v1.png"/> Max IMEI</a></li>
+  <li><a href="#" class="tablinks" onclick="myfunction(event, 'MaxLocation')"><img src="https://img.icons8.com/material/24/ffffff/worldwide-location--v1.png"/> Max Location</a></li>
+  <li><a href="#" class="tablinks" onclick="myfunction(event, 'CellId')"><img src="https://img.icons8.com/material/24/ffffff/radio-tower.png"/> Cell ID</a></li>
+</ul>
+
+<div class="output" style="margin-left:15%;padding:100px 16px;height:100%;">
+  <div id="Home" class="tabcontent" style="display: none">
+    <h3>Home</h3>
+
+    <table border="1">
+      <tr>
+        <th>CallingNo</th>
+        <th>CalledNo</th>
+        <th>CallType</th>
+        <th>CallDate</th>
+        <th>CallTime</th>
+        <th>CallDuration</th>
+        <th>FirstCellId</th>
+        <th>LastCellId</th>
+        <th>IMEI</th>
+        <th>Circle</th>
+      </tr>
+      {% for i in CDRdb%}
+      <tr>
+        <td>{{i.CallingNo}}</td>
+        <td>{{i.CalledNo}}</td>
+        <td>{{i.CallType}}</td>
+        <td>{{i.CallDate}}</td>
+        <td>{{i.CallTime}}</td>
+        <td>{{i.CallDuration}}</td>
+        <td>{{i.FirstCellId}}</td>
+        <td>{{i.LastCellId}}</td>
+        <td>{{i.IMEINo}}</td>
+        <td>{{i.Circle}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    
+  </div>
+  <div id="MaxCaller" class="tabcontent" style="display: none">
+    <h3>Max Caller </h3>
+  </div>
+  <div id="MaxDuration" class="tabcontent" style="display: none">
+    <h3>Max Duration</h3>
+  </div>
+  <div id="MaxIMEI" class="tabcontent" style="display: none">
+    <h3>Max IMEI</h3>
+  </div>
+  <div id="MaxLocation" class="tabcontent" style="display: none">
+    <h3>Max Location</h3>
+  </div>
+  <div id="CellId" class="tabcontent" style="display: none">
+    <h3>Cell ID</h3>
+  </div>
+</div>
+<script src="script.js" charset="utf-8">
+</script>
+</body>
+</html>
