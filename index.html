@@ -9,10 +9,11 @@
 <body>
   <div class="toptab">
   <img src="logo1.png" style="width: 350px; margin-left: 10px;">
+  <button type="button" name="Summary" id="b1">Upload</button>
   <button type="button" name="Summary" id="b2">Summary</button>
-  <button type="button" name="Download" id="b3">Download</button>
+  <button type="button" name="Download" id="b3">About</button>
   <div class="dropdown">
-  <button class="dropbtn">Upload</button>
+  <button class="dropbtn">Download</button>
   <div class="dropdown-content">
   <a href="#">XML</a>
   <a href="#">PDF</a>
@@ -21,11 +22,13 @@
 </div>
   </div>
 <ul>
-  
-  <li><a  class="tablinks" onclick="myfunction(event, 'Home')" href="#home"><img src="https://img.icons8.com/material/24/000000/home--v5.png"/> Home</a></li>
-  <li><a href="#" class="tablinks" onclick="myfunction(event, 'MaxCaller')"><img src="https://img.icons8.com/android/24/000000/end-call.png"/> Max Caller</a></li>
-  <li><a href="#" class="tablinks" onclick="myfunction(event, 'MaxDuration')"><img src="https://img.icons8.com/metro/26/000000/time.png"/> Max Duration</a></li>
-  <li><a href="#" class="tablinks" onclick="myfunction(event, 'MaxIMEI')"><img src="https://img.icons8.com/material/24/000000/iphone-x.png"/> Max IMEI</a></li>
+
+  <li><a  class="tablinks" onclick="myfunction(event, 'Home')" href="#home"><img src="https://img.icons8.com/material-sharp/30/ffffff/home.png"/> Home</a></li>
+  <li><a href="#" class="tablinks" onclick="myfunction(event, 'MaxCaller')"><img src="https://img.icons8.com/metro/26/ffffff/phone-disconnected.png"/> Max Caller</a></li>
+  <li><a href="#" class="tablinks" onclick="myfunction(event, 'MaxDuration')"><img src="https://img.icons8.com/metro/26/ffffff/time-machine.png"/> Max Duration</a></li>
+  <li><a href="#" class="tablinks" onclick="myfunction(event, 'MaxIMEI')"><img src="https://img.icons8.com/material/24/ffffff/iphone--v1.png"/> Max IMEI</a></li>
+  <li><a href="#" class="tablinks" onclick="myfunction(event, 'MaxLocation')"><img src="https://img.icons8.com/material/24/ffffff/worldwide-location--v1.png"/> Max Location</a></li>
+  <li><a href="#" class="tablinks" onclick="myfunction(event, 'CellId')"><img src="https://img.icons8.com/material/24/ffffff/radio-tower.png"/> Cell ID</a></li>
 </ul>
 
 <div class="output" style="margin-left:15%;padding:100px 16px;height:100%;">
@@ -40,6 +43,12 @@
   </div>
   <div id="MaxIMEI" class="tabcontent" style="display: none">
     <h3>Max IMEI</h3>
+  </div>
+  <div id="MaxLocation" class="tabcontent" style="display: none">
+    <h3>Max Location</h3>
+  </div>
+  <div id="CellId" class="tabcontent" style="display: none">
+    <h3>Cell ID</h3>
   </div>
 </div>
 <script src="script.js" charset="utf-8">
