@@ -16,9 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from cdr import views
+from . import views
 
 urlpatterns = [
-    #path('admin/', admin.site.urls),
-    path('display/',views.Showdata)
+    path('admin/', admin.site.urls),
+    path('',views.Showdata),
+    path('MaxCaller',views.maxcall),
+    path('MaxDuration',views.maxduration),
+    path('MaxLocation',views.maxlocation)
+
+
 ]
