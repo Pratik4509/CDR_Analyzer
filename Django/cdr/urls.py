@@ -23,7 +23,9 @@ urlpatterns = [
     path('',views.Showdata),
     path('MaxCaller',views.maxcall),
     path('MaxDuration',views.maxduration),
-    path('MaxLocation',views.maxlocation)
+    path('MaxLocation',views.maxlocation),
+    path('MaxIMEI',views.maximei),
+    path('MaxCellId',views.cellid)
 
 
 ]
