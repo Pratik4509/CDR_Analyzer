@@ -6,10 +6,10 @@ def Showdata(request):
         fromdate=request.POST.get('fromdate')
         todate=request.POST.get('todate')
         searchresult=CDRdb.objects.raw('select id,CallingNo,CalledNo,CallType,CallDate,CallTime,CallDuration,FirstCellId,LastCellId,IMEINo,Circle from cdr_logs where CallDate between "'+fromdate+'" and "'+todate+'"')
-        return searchresult#render(request,'display.html',{"CDRdb":searchresult})
+        return render(request,'display.html',{"CDRdb":searchresult})
     else:
         res=CDRdb.objects.all()
-        return res#render(request,'display.html',{"CDRdb":res})
+        return render(request,'display.html',{"CDRdb":res})
 def maxcall(request):
    # if request.method=="POST":
         #fromdate=request.POST.get('fromdate')
@@ -18,7 +18,7 @@ def maxcall(request):
        # return searchresult#render(request,'display.html',{"Max_Call":searchresult})
    # else:
         res=Max_Call.objects.all()
-        return res#render(request,'display.html',{"Max_Call":res})
+        return render(request,'MaxCaller.html',{"Max_Call":res})
 #def imei(request):
    # if request.method=="POST":
     #    searchresult=CDRdb.objects.raw('SELECT DISTINCT (IMEINo),(COUNT(IMEINo) over (PARTITION BY IMEINo)) as Total,(SUM(CallDuration) over (PARTITION BY IMEINo)) as Total_Duration FROM cdr_logs order BY IMEINo')
@@ -26,6 +26,11 @@ def maxcall(request):
    # else:
     #    res=CDRdb.objects.all()
      #   return res
+
+def maxduration(request):
+    return render(request,'MaxDuration.html',) 
+def maxlocation(request):
+    return render(request,'MaxLocation.html',)          
 def reset(request):
     if request.method=="POST":
         searchresult=CDRdb.objects.all()
