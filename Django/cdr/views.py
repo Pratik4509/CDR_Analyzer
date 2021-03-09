@@ -30,7 +30,12 @@ def maxcall(request):
 def maxduration(request):
     return render(request,'MaxDuration.html',) 
 def maxlocation(request):
-    return render(request,'MaxLocation.html',)          
+    return render(request,'MaxLocation.html',)
+def maximei(request):
+    return render(request,'MaxIMEI.html',) 
+def cellid(request):
+    return render(request,'CellId.html',)   
+
 def reset(request):
     if request.method=="POST":
         searchresult=CDRdb.objects.all()
